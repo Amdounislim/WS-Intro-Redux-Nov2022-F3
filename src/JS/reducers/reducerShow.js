@@ -1,3 +1,4 @@
+import { TOGGLE } from "../constants/actionsType"
 
 
 const initialState = {
@@ -5,7 +6,7 @@ const initialState = {
 }
 
 const reducerShow = (state = initialState, action) => {
-    if (action.type === 'TOGGLE') {
+    if (action.type === TOGGLE) {
         return { ...state, show: !state.show }
     } else {
         return state

@@ -1,3 +1,4 @@
+import { DECREMENT, INCREMENT, RESET } from "../constants/actionsType"
 
 const initialState = {
     count: 0
@@ -6,13 +7,13 @@ const initialState = {
 
 const reducerCounter = (state = initialState, action) => {
     switch (action.type) {
-        case "INCREMENT":
+        case INCREMENT:
             return { ...state, count: state.count + 1 }
 
-        case "DECREMENT":
+        case DECREMENT:
             return { ...state, count: state.count - 1 }
 
-        case "RESET":
+        case RESET:
             return { ...state, count: 0 }
 
         default:
